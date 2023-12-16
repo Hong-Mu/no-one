@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No-One</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWEaB4YibzsbUMPh6xIeJ3r3lreyAAB2w&callback=console.debug&libraries=maps,marker&v=beta">
+        </script>
+    <style>
+        #map {
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 h-screen">
+
+    <!-- header -->
+    <header class="bg-white shadow">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <h1 class="text-3xl font-bold text-gray-900"><a href="/">No-One</a></h1>
+            <div>
+                <a href="/posts">
+                    <button
+                        class="btn mx-1 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                        Post
+                    </button>
+                </a>
+
+                <a href="/map">
+                    <button
+                        class="btn mx-1 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                        Map
+                    </button>
+                </a>
+
+                <a href="/login">
+                    <button
+                        class="btn ml-1 bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                        Login
+                    </button>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="h-full">
+        <gmp-map class="h-full" center="37.63185501098633,127.07743835449219" zoom="14" map-id="DEMO_MAP_ID">
+            <gmp-advanced-marker position="37.63185501098633,127.07743835449219" title="My location">
+            </gmp-advanced-marker>
+        </gmp-map>
+
+    </main>
+</body>
+
+</html>
